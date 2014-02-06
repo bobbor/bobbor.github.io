@@ -1,5 +1,3 @@
-source: ./_src
-destination: ./_dest
 name: Philipp Paul
 markdown: redcarpet
 pygments: true
