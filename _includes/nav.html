@@ -1,26 +1,27 @@
-<nav>
-<ul>
+<hr/>
+{% for p in site.pages %}
+    {% if p.title != "Home" %}
+    <p class="view">
+        {% if p.url == page.url %}
+        <span>{{ p.title }}<small>{{ p.desc }}</small></span>
+        {% else %}
+        <a href="{{ p.url }}">{{ p.title }}<small>{{ p.desc }}</small></a>
+        {% endif %}
+    </p>
+    {% endif %}
+{% endfor %}
+<hr/>
+{% if site.posts %}
     {% for p in site.posts %}
-    {% if p.title != "Home" %}
-    <li>
-        {% if p.url == page.url %}
-           <span>{{ p.title }}</span>
-        {% else %}
-        <a href="{{ p.url }}">{{ p.title }}</a>
+        {% if p.title != "Home" %}
+        <p class="view">
+            {% if p.url == page.url %}
+               <span>{{ p.title }}</span>
+            {% else %}
+            <a href="{{ p.url }}">{{ p.title }}<small>{{ p.desc }}</small></a>
+            {% endif %}
+        </p>
         {% endif %}
-    </li>
-    {% endif %}
     {% endfor %}
-    {% for p in site.pages %}
-    {% if p.title != "Home" %}
-    <li>
-        {% if p.url == page.url %}
-        <span>{{ p.title }}</span>
-        {% else %}
-        <a href="{{ p.url }}">{{ p.title }}</a>
-        {% endif %}
-    </li>
-    {% endif %}
-    {% endfor %}
-</ul>
-</nav>
+{% endif %}
+<hr/>

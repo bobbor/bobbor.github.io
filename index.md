@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+desc: Your journey starts here
 ---
 
 Hey there, I am Philipp Paul
