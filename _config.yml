@@ -1,0 +1,14 @@
+source: ./_src
+destination: ./_dest
+name: Philipp Paul
+markdown: redcarpet
+pygments: true
+timezone: Europe/Berlin
+encoding: UTF-8
+baseurl: /
+url: http://localhost:4000
+permalink: none
+exclude:     ['*.iml', 'README.md', 'LICENSE.md']
+
+redcarpet:
+  extensions: ["fenced_code_blocks"]

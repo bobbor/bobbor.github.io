@@ -1,0 +1,26 @@
+<nav>
+<ul>
+    {% for p in site.posts %}
+    {% if p.title != "Home" %}
+    <li>
+        {% if p.url == page.url %}
+           <span>{{ p.title }}</span>
+        {% else %}
+        <a href="{{ p.url }}">{{ p.title }}</a>
+        {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+    {% for p in site.pages %}
+    {% if p.title != "Home" %}
+    <li>
+        {% if p.url == page.url %}
+        <span>{{ p.title }}</span>
+        {% else %}
+        <a href="{{ p.url }}">{{ p.title }}</a>
+        {% endif %}
+    </li>
+    {% endif %}
+    {% endfor %}
+</ul>
+</nav>
